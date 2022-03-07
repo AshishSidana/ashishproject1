@@ -1,73 +1,76 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     {% block head %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 
-        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
+
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <header class="mb-5">
-            <!-- As a link -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="/">My Site</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">Page 1</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2")}}">Page 2</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page3")}}">Page 3</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4")}}">Page 4</a>
-                            </li>
-                        </ul>
-                    </div>
+
+    <body>
+        <div class="container">
+            <div class="row" style="margin-top: 40px; background-color: lightgreen;">
+                <div class="col-sm-3"> <span class="heading_top"><span class="heading_top_2">Ashish</span> Project1</span>
                 </div>
-            </nav>
-        </header>
-    </div>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
-    <footer>
-        Environment: {{ deployment_environment }} - Copyright: {{ year }}
-        Message: {{ mymessage }} {{ format_price(100) }}
-    </footer>
+                <div class="col-sm-2"> </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a class="nav-link {% block active_header_home %}  {% endblock %}" aria-current="page" href="/">Home</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="nav-link  {% block active_header_git %}  {% endblock %}" aria-current="page" href="/git">Git</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="nav-link  {% block active_header_docker %}  {% endblock %}" aria-current="page" href="/docker">Docker</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="nav-link  {% block active_header_python %}  {% endblock %}" aria-current="page" href="/python">Python</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="nav-link  {% block active_header_ci_cd %}  {% endblock %}" aria-current="page" href="/ci-cd">CI/CD</a>
+                        </div>
+                    </div>
 
-</div>
+                </div>
+            </div>
+            {% block content %}
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+            {% endblock %}
+            <br/> <br/>
+            <footer>
+                Environment: {{ deployment_environment }} - Copyright: {{ year }}
+            </footer>
 
-</body>
+        </div>
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+    </body>
+
 </html>

@@ -11,8 +11,8 @@
 
 ## Setting up CI/CD
 
-The result of this will be that when you create a pull request to merge a branch to master, it will deploy to your
-heroku development app/dyno and when you merge or push to master on github, it will deploy the app to the production heroku
+The result of this will be that when you create a pull request to merge a branch to main, it will deploy to your
+heroku development app/dyno and when you merge or push to main on github, it will deploy the app to the production heroku
 app/dyno.
 ### Instructions
 
@@ -51,6 +51,3 @@ app/dyno.
 * https://flask-user.readthedocs.io/en/latest/basic_app.html
 * https://hackersandslackers.com/flask-application-factory/
 * https://suryasankar.medium.com/a-basic-app-factory-pattern-for-production-ready-websites-using-flask-and-sqlalchemy-dbb891cdf69f
-
-
-test 
