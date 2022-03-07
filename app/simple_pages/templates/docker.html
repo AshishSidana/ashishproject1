@@ -4,15 +4,17 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-sm-11" style="margin-top: 40px; background-color: lightblue; font-size: 1.3em; line-height: 30px;">
+    <div class="col-sm-12" style="margin-top: 40px; background-color: lightblue; font-size: 1.3em; line-height: 30px;">
         Introduction</div>
 </div>
 <div class="row" style="margin-top: 20px; margin-left: -25px;">
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">What is Docker?</h5>                
-                <p class="card-text">Git is free open source version control system. </p>
+                <h5 class="card-title">What is Docker?</h5>
+                <p class="card-text">Docker is a set of platform as a service products that use OS-level virtualization
+                    to deliver software in packages called containers. The software that hosts the containers is called
+                    Docker Engine. </p>
             </div>
         </div>
     </div>
@@ -20,8 +22,9 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">What is Docker hub ?</h5>                
-                <p class="card-text">Git is free open source version control system. </p>
+                <h5 class="card-title">What is Docker hub ?</h5>
+                <p class="card-text">Docker Hub is a service provided by Docker for finding and sharing container images
+                    with your team. </p>
             </div>
         </div>
     </div>
@@ -30,8 +33,14 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Docker commands</h5>                
-                <p class="card-text">Git is free open source version control system. </p>
+                <h5 class="card-title">Docker commands</h5>
+                <p class="card-text">
+                    docker ps: check running containers <br />
+                    docker conatins ls: Check docker container present in system <br />
+                    docker images ls: Check docker images present in system <br />
+                    docker kill <conatiner-id>: Kill container<br />
+                        docker stop <conatiner-id>: Stop container <br />
+                </p>
             </div>
         </div>
     </div>
@@ -39,8 +48,18 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Access container using terminal</h5>                
-                <p class="card-text">Git is free open source version control system. </p>
+                <h5 class="card-title">Access container using terminal</h5>
+                <p class="card-text">
+                <ul>
+                    <li> Use <code>docker ps</code> to get the name of the existing container </li>
+                    <li> Use the command <code>ocker exec -it <container name> /bin/bash </code>to get a bash shell in
+                        the container
+                    </li>
+                    <li> Generically, use <code>docker exec -it <container name>
+                            <command> </code>to execute whatever command you specify in the container. </li>
+
+                </ul>
+                </p>
             </div>
         </div>
     </div>
@@ -50,8 +69,17 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Run project</h5>                
-                <p class="card-text">Git is free open source version control system. </p>
+                <h5 class="card-title">Run project</h5>
+                <p class="card-text">
+
+                <ul>
+
+                    <li> To Build with docker compose:
+                        <code>docker compose up --build</code>
+                    </li>
+                    <li> To run tests, Lint, and Coverage report use this command:<code> pytest --pylint --cov </code></li>
+                </ul>
+                </p>
             </div>
         </div>
     </div>
