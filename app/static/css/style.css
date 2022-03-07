@@ -1,0 +1,19 @@
+body {
+    font-family: Helvetica, "Helvetica Neue", sans-serif;
+}
+
+.heading_top {
+    font-family: cursive;
+    font-size: larger;
+}
+
+.heading_top_2 {
+    font-family: cursive;
+    font-size: larger;
+    color: green;
+}
+
+.active_header{
+    background-color: #198754;
+    color: white;
+}
