@@ -4,5 +4,71 @@
 
 
 {% block content %}
-    Page 3
+<div class="row">
+    <div class="col-sm-11" style="margin-top: 40px; background-color: lightblue; font-size: 1.3em; line-height: 30px;">
+        Introduction</div>
+</div>
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Application 5 pages</h5>                
+                <p class="card-text"> <strong>Home/Index:</strong> Its landing page for app showing technology stack used</p>
+                <p class="card-text"> <strong>Git:</strong> Talks about Git</p>
+                <p class="card-text"> <strong>Docker:</strong> Talks about Docker</p>
+                <p class="card-text"> <strong>Python:</strong> Talks about application structure & testing</p>
+                <p class="card-text"> <strong>CI/CD:</strong> Talks about integration & deployment</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Testing of pages</h5>                
+                <p class="card-text">Here we have created a python test file simple_pages_test.py. <br/>
+                    Created test case based on path search text present in HTML page.<br/>
+                    <code>
+                        def test_request_index(client):<br/>
+                        """This makes the index/home page"""<br/>
+                        response = client.get("/")<br/>
+                        assert response.status_code == 200<br/>
+                        assert b"Home" in response.data<br/>
+                    </code>
+                    Simmilarly test cases created for other pages & menu.
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Docker commands</h5>                
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Access container using terminal</h5>                
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Run project</h5>                
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

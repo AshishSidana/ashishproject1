@@ -1,7 +1,77 @@
 {% extends "base.html" %}
 
-{% block active_header_ci_cd %} active_header  {% endblock %}
+{% block active_header_ci_cd %} active_header {% endblock %}
 
 {% block content %}
-    Page 4
+<div class="row">
+    <div class="col-sm-11" style="margin-top: 40px; background-color: lightblue; font-size: 1.3em; line-height: 30px;">
+        Introduction</div>
+</div>
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">What is CI/CD?</h5>
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Heroku</h5>
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Docker Repository</h5>
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">GitHub Actions</h5>
+                <p class="card-text">Git is free open source version control system. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px; margin-left: -25px;">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Workflow Dev & Prod</h5>
+                <p class="card-text"> 
+                    <strong>Dev:</strong> When pull request created for main branch then devlopement
+                    workflow get triggred.
+                    Once all  jobs stages passed then code will be deployed on heroku.
+                <ul>
+                    <li>run_pytest</li>
+                    <li>deploy_heroku</li>
+                </ul>
+                </p>
+                <p class="card-text"> 
+                    <strong>Prod:</strong> When code is pushed to main branch either by commit or pull request get merged then devlopement
+                    workflow get triggred.
+                    Once all jobs stages passed then code will be deployed on heroku.
+                <ul>
+                    <li>runtest</li>
+                    <li> build-container</li>
+                    <li> deploy</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
