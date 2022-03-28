@@ -12,10 +12,9 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">What is AAA Testing?</h5>
-                <p class="card-text">In software engineering, CI/CD or CICD is the combined practices of continuous
-                    integration and either continuous delivery or continuous deployment. CI/CD bridges the gaps between
-                    development and operation activities and teams by enforcing automation in building, testing and
-                    deployment of applications.</p>
+                <p class="card-text">The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. 
+                    It suggests that you should divide your test method into three sections: arrange, act and assert. 
+                    Each one of them only responsible for the part in which they are named after.</p>
             </div>
         </div>
     </div>
@@ -23,76 +22,23 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Heroku</h5>
-                <p class="card-text"> Heroku is a container-based cloud Platform as a Service (PaaS). Developers use
-                    Heroku to deploy, manage, and scale modern apps. Our platform is elegant, flexible, and easy to use,
-                    offering developers the simplest path to getting their apps to market. </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row" style="margin-top: 20px; margin-left: -25px;">
-    
+                <h5 class="card-title">Calculator Code Snippet</h5>
+                <p class="card-text"> 
+                    <code>
+                        def test_calculator_add_method():
+                            """Testing the Calculator add """ <br/>
+                            # this is show using the calculator object add method<br/>
+                            ## Arrange for AAA testing<br/>
+                            tuple = (8.0, 2)<br/>
 
-    <div class="col-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">GitHub Actions</h5>
-                <p class="card-text">Created repostory secrets variables.<br />
-                    <a href="https://github.com/AshishSidana/ashishproject1/settings/secrets/actions" target="_blank">
-                        Create Secrets</a><br />
-                    Github > Settings > Secrets > Actions <br />
-                    Create three variables & set appropriate values.
-                <ul>
-                    <li>DOCKER_USERNAME</li>
-                    <li>DOCKER_PASSWORD</li>
-                    <li>HEROKU_API_KEY</li>
+                            ## Act for AAA testing<br/>
+                            result = Calculator.add(tuple)<br/>
 
-                </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Docker Repository</h5>
-                <p class="card-text">A Docker repository is where you can store 1 or more versions of a specific Docker
-                    image.<br />
-                    Repository link for this project is <a
-                        href=" https://hub.docker.com/repository/docker/ashishsidana/ashishproject1" target="_blank">
-                        https://hub.docker.com/repository/docker/ashishsidana/ashishproject1</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+                            ## Assertion for AAA testing<br/>
+                            assert result == 10<br/>
 
-<div class="row" style="margin-top: 20px; margin-left: -25px;">
-    <div class="col-6">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Workflow Dev & Prod</h5>
-                <p class="card-text">
-                    <strong>Dev:</strong> When pull request created for main branch then devlopement
-                    workflow get triggred.
-                    Once all jobs stages passed then code will be deployed on heroku.
-                <ul>
-                    <li>run_pytest</li>
-                    <li>deploy_heroku</li>
-                </ul>
-                </p>
-                <p class="card-text">
-                    <strong>Prod:</strong> When code is pushed to main branch either by commit or pull request get
-                    merged then devlopement
-                    workflow get triggred.
-                    Once all jobs stages passed then code will be deployed on heroku.
-                <ul>
-                    <li>runtest</li>
-                    <li> build-container</li>
-                    <li> deploy</li>
-                </ul>
-                </p>
+                    </code>
+                     </p>
             </div>
         </div>
     </div>
