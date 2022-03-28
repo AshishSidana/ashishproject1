@@ -10,10 +10,19 @@ body {
 .heading_top_2 {
     font-family: cursive;
     font-size: larger;
-    color: green;
+    color: white;;
 }
 
 .active_header{
-    background-color: #198754;
-    color: white;
+    /**background-color: #198754;*/
+    color: white !important;
+    text-decoration: underline !important;
+}
+.heading_link {
+    color: #dcdbe0;
+    text-decoration: none;
+}
+a.heading_link:hover {
+    color: #dcdbe0;
+    text-decoration: none;
 }

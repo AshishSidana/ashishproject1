@@ -21,26 +21,42 @@
 
     <body>
         <div class="container">
-            <div class="row" style="margin-top: 40px; background-color: lightgreen;">
-                <div class="col-sm-3"> <span class="heading_top"><span class="heading_top_2">Ashish</span> Project1</span>
+            <div class="row" style="margin-top: 40px; background-color: #198754;">
+                <div class="col-sm-2"> <span class="heading_top"><span class="heading_top_2">Ashish</span>
+                        Project</span>
                 </div>
-                <div class="col-sm-2"> </div>
-                <div class="col-sm-7">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <a class="nav-link {% block active_header_home %}  {% endblock %}" aria-current="page" href="/">Home</a>
+                <div class="col-sm-1"> </div>
+                <div class="col-sm-9">
+                    <div class="row" style="margin-top: 10px; ">
+                        <div class="col-sm-1 ">
+                            <a class=" heading_link {% block active_header_home %}  {% endblock %}" aria-current="page" href="/">Home</a>
                         </div>
-                        <div class="col-sm-2">
-                            <a class="nav-link  {% block active_header_git %}  {% endblock %}" aria-current="page" href="/git">Git</a>
+                        <div class="col-sm-1">
+                            <a class="heading_link {% block active_header_about %}  {% endblock %}" aria-current="page" href="/about">About</a>
                         </div>
-                        <div class="col-sm-2">
-                            <a class="nav-link  {% block active_header_docker %}  {% endblock %}" aria-current="page" href="/docker">Docker</a>
+                        <div class="col-sm-1">
+                            <a class=" heading_link {% block active_header_git %}  {% endblock %}" aria-current="page" href="/git">Git</a>
                         </div>
-                        <div class="col-sm-2">
-                            <a class="nav-link  {% block active_header_python %}  {% endblock %}" aria-current="page" href="/python">Python</a>
+                        <div class="col-sm-1">
+                            <a class=" heading_link {% block active_header_docker %}  {% endblock %}"  aria-current="page" href="/docker">Docker</a>
                         </div>
-                        <div class="col-sm-2">
-                            <a class="nav-link  {% block active_header_ci_cd %}  {% endblock %}" aria-current="page" href="/ci-cd">CI/CD</a>
+                        <div class="col-sm-1">
+                            <a class="heading_link  {% block active_header_python %}  {% endblock %}" aria-current="page" href="/python">Python</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a class=" heading_link {% block active_header_ci_cd %}  {% endblock %}" aria-current="page" href="/ci-cd">CI/CD</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a class=" heading_link {% block active_header_glossary %}  {% endblock %}" aria-current="page" href="/glossary">Glossary</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a class="heading_link  {% block active_header_aaa_testing %}  {% endblock %}" aria-current="page" href="/aaa-testing">AAA</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a class="heading_link {% block active_header_oops %}  {% endblock %}" aria-current="page" href="/oops">OOPs</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a class="heading_link {% block active_header_solid %}  {% endblock %}" aria-current="page" href="/solid">SOLID</a>
                         </div>
                     </div>
 
@@ -49,9 +65,9 @@
             {% block content %}
 
             {% endblock %}
-            <br/> <br/>
+            <br /> <br />
             <footer>
-                Environment: {{ deployment_environment }} - Copyright: {{ year }}
+                This is my website - Copyright: {{ year }}
             </footer>
 
         </div>
