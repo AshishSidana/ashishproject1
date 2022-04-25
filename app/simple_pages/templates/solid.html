@@ -13,13 +13,23 @@
             <div class="card-body">
                 <h5 class="card-title">What is SOLID?</h5>
                 <p class="card-text"> SOLID stands for:
-                    <ul>
-                        <li> S - Single-responsiblity Principle. </li>
-                        <li> O - Open-closed Principle.</li>
-                        <li> L - Liskov Substitution Principle.</li>
-                        <li> I - Interface Segregation Principle.</li>
-                        <li> D - Dependency Inversion Principle.</li>
-                    </ul></p>
+                <ul>
+                    <li> S - Single-responsiblity Principle. </li>
+                    <li> O - Open-closed Principle.</li>
+                    <li> L - Liskov Substitution Principle.</li>
+                    <li> I - Interface Segregation Principle.</li>
+                    <li> D - Dependency Inversion Principle.</li>
+                </ul>
+                </p>
+                <p>
+                    These principles establish practices that lend to developing software with considerations for
+                    maintaining
+                    and extending as the project grows. Adopting these practices can also contribute to avoiding code
+                    smells,
+                    refactoring code, and Agile or Adaptive software development.
+
+                </p>
+
             </div>
         </div>
     </div>
@@ -27,8 +37,116 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">SOLID</h5>
-                <p class="card-text"> Like calulator follows SOLID principle </p>
+                <h5 class="card-title">Single-Responsibility Principle</h5>
+                <p class="card-text"> A class should have one and only one reason to change, meaning that a class should
+                    have only one job. </p>
+                <p>
+                    Like each functionality Addition, Subtraction, Multiplication & Division have written in seperate
+                    classes.
+                </p>
+                <code>
+                        class Addition(Calculation):<br/>
+                        &nbsp;&nbsp;def get_result(self):<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;"""get the addition results"""<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;sum_of_values = 0.0<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;for value in self.values:<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;sum_of_values = Add.add(value, sum_of_values)<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;return sum_of_values<br/>
+    
+                    </code>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Open-Closed Principle</h5>
+                <p class="card-text"> Objects or entities should be open for extension but closed for modification. </p>
+                <p>
+                    This means that a class should be extendable without modifying the class itself.
+                    If we want to add new operation feature needs to add create new class & extend Calculation.
+                    Implemention get_result method.
+                </p>
+                <code>
+                    class Calculation: <br/>
+                    &nbsp;&nbsp;""" calculation abstract base class""" <br/><br/>
+                    class Squre(Calculation):<br/>
+                    &nbsp;&nbsp;def get_result(self):<br/>
+                    &nbsp;&nbsp; &nbsp;&nbsp;"""return squred value as results"""<br/>
+    
+                    </code>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Liskov Substitution Principle</h5>
+                <p class="card-text"> Let q(x) be a property provable about objects of x of type T.
+                    Then q(y) should be provable for objects y of type S where S is a subtype of T. </p>
+                <p>
+                    This means that every subclass or derived class should be substitutable for their base or parent
+                    class.
+                </p>
+                <code>
+                    Calculation calculation1 = Addition.create(tuple_list)<br/>
+                    Calculation calculation2 = Subtraction.create(tuple_list)<br/>
+
+                      
+                    </code>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Interface Segregation Principle</h5>
+                <p>
+                    A client should never be forced to implement an interface that it doesn’t use,
+                    or clients shouldn’t be forced to depend on methods they do not use.
+                </p>
+                <p>
+                    For other operation perform, need to extend Calculation and procide result as per implementation.
+                </p>
+                <code>
+                    class Calculation:<br/>
+                    &nbsp;&nbsp; """ calculation abstract base class"""<br/><br/>
+                   class Addition(Calculation):<br/>
+                   &nbsp;&nbsp;def get_result(self):<br/>
+                   &nbsp;&nbsp; &nbsp;&nbsp;"""get the addition results"""<br/>
+
+                   class Subtration(Calculation):<br/>
+                   &nbsp;&nbsp;def get_result(self):<br/>
+                   &nbsp;&nbsp; &nbsp;&nbsp;"""get the subtracted results"""<br/>
+
+               </code>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Dependency Inversion Principle</h5>
+                <p>
+                    Entities must depend on abstractions, not on concretions.
+                    It states that the high-level module must not depend on the low-level module, but they should depend
+                    on abstractions.
+                </p>
+                <p>This principle allows for decoupling. </p>
+                <p>Here all the operations(addition, subtra, multiplication, division) are independant.
+                     Concrete implementation depends on Calculation class which is high level & not depending on implementation(low level) </p>
+                <code>
+                         class Calculation:<br/>
+                         &nbsp;&nbsp; """ calculation abstract base class"""<br/><br/>
+                        class Addition(Calculation):<br/>
+                        &nbsp;&nbsp;def get_result(self):<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;"""get the addition results"""<br/>
+
+                        class Subtration(Calculation):<br/>
+                        &nbsp;&nbsp;def get_result(self):<br/>
+                        &nbsp;&nbsp; &nbsp;&nbsp;"""get the subtracted results"""<br/>
+    
+                    </code>
             </div>
         </div>
     </div>
