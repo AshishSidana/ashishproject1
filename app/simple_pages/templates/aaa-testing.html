@@ -15,6 +15,25 @@
                 <p class="card-text">The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. 
                     It suggests that you should divide your test method into three sections: arrange, act and assert. 
                     Each one of them only responsible for the part in which they are named after.</p>
+                <p>The <strong>Arrange</strong> part is where we set up our environment, i.e. everything we need to run our test code. 
+                    This includes initializing objects, dependencies, and all data required for the test case.</p>
+                <p>The <strong>Act</strong> part is where we execute the test by calling the functions set up in the previous step.</p>
+                <p>Finally, the <strong>Assert</strong> part is where we specify the pass criteria for the test, which fails it if not met,
+                    i.e. if the actual results of the test don’t match those we expected.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Why testing is important?</h5>
+                <p class="card-text">Unit testing allows software developers to actually think through the design of the 
+                    software and what has to be done before they write the code.
+                     This can help them to stay focused and can also help them to create much better designs.</p>
+
+                <p>Developers write unit tests for their code to make sure that the code works correctly. 
+                     This helps to detect and protect against bugs in the future. Sometimes developers write unit tests first,
+                      then write the code. This approach is also known as test-driven development (TDD).</p>
             </div>
         </div>
     </div>
@@ -42,5 +61,6 @@
             </div>
         </div>
     </div>
+    
 </div>
 {% endblock %}

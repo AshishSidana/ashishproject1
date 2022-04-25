@@ -41,5 +41,64 @@
             </div>
         </div>
     </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Encapsulation: </strong>It describes the idea of wrapping data and the methods that work on data within one unit. 
+                    This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data.<br/>
+                    Ex. Both objects(cal1 & cal2) are seperate having same propert having different value.<br/>
+                   <code>
+                       cal1 = Calculations()<br/>
+                       cal1.values = [1,2]<br/>
+                       cal2 = Calculations()<br/>
+                       cal2.values = [3,4]<br/>
+                   </code>
+                </p>
+                <p class="card-text">
+                    <strong>Inheritance: </strong>Inheritance allows us to define a class that inherits all the methods and 
+                    properties from another class.<br/>
+                    Parent class is the class being inherited from, also called base class.<br/>                    
+                    Child class is the class that inherits from another class, also called derived class.<br/>
+                   <code>
+                    class Calculation:<br/>
+                    def __init__(self, tuple_list: tuple):<br/>
+                    &nbsp;&nbsp; """ constructor method"""
+                    &nbsp;&nbsp; self.values = Calculation.convert_args_to_tuple_of_float(tuple_list)<br/><br/>
+                    class Addition(Calculation):
+                   </code>
+                </p>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Polymorphism: </strong>The word polymorphism means having many forms. 
+                    In programming, polymorphism means the same function name (but different signatures) being used for different types.<br/>
+                   <code>
+                    
+                    # len() being used for a string<br/>
+                    print(len("geeks"))<br/><br/>
+                     
+                    # len() being used for a list<br/>
+                    print(len([10, 20, 30]))
+                   </code>
+                </p>
+                <p class="card-text">
+                    <strong>Abstraction: </strong>Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user. <br/>
+                   <code>
+                    calculation = Addition.create(tuple_list)<br/><br/>
+                    # hide the complexity of calculating mileage<br/>
+                    Car().mileage()
+                   </code>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

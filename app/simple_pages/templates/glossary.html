@@ -13,21 +13,134 @@
             <div class="card-body">
                 <h5 class="card-title">What is Class & Object?</h5>
                 <p class="card-text">
-                    <strong>Class: </strong> Class is a blueprint
+                    <strong>Class: </strong> Class is a "blueprint" for creating objects. <br/>
+                    Ex. To create a class, use the keyword class<br/>
+                   <code>  class Calculation:</code>
+
                 </p>
                 <p class="card-text">
-                    <strong>Object: </strong> ClaObjectss is run time instance of class
+                    <strong>Object: </strong> Objects is run time instance of class
+                    Ex. cal is a object of class Calculation<br/>
+                    <code>cal = Calculation()</code>
+
                 </p>
             </div>
         </div>
     </div>
+    
+    
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Constructor: </strong> Constructors are generally used for instantiating an object. 
+                    The task of constructors is to initialize(assign values) to the data members of the class when an object of the class is created. 
+                    In Python the __init__() method is called the constructor and is always called when an object is created. <br/>
+                    Ex. <br/>
+                   <code>class Calculation: <br/>
+                     &nbsp;&nbsp; def __init__(self):  <br/>
+                   </code>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Static Property: </strong>Static means, that the member is on a class level rather on the instance level.
+                    Variables declared inside the class definition, but not inside a method are class or static variables.<br/>
+                    Ex. <br/>
+                   <code>class Calculations:<br/>
+                    &nbsp;&nbsp; """Calculations class manages the history of calculations"""<br/>
+                    &nbsp;&nbsp; history = []<br/>
+                   </code>
+                </p>
+                <p class="card-text">
+                    <strong>Static Method: </strong>A class method is a method that is bound to the class and not the object of the class.
+                    @staticmethod decorator to create a static method in python.<br/>
+                    Ex. <br/>
+                   <code>class Calculations:<br/>
+                    &nbsp;&nbsp; """Calculations class manages the history of calculations"""<br/>
+                    &nbsp;&nbsp; history = []<br/>
+                    &nbsp;&nbsp;  @staticmethod<br/>
+                    &nbsp;&nbsp;  def clear_history():<br/>
+                    &nbsp;&nbsp; &nbsp;&nbsp; """clear the history of calculations"""<br/>
+                    &nbsp;&nbsp; &nbsp;&nbsp; Calculations.history.clear()<br/>
+                    &nbsp;&nbsp; &nbsp;&nbsp; return True<br/><br/>
+                   </code>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Instance Property: </strong>An instance attribute is a Python variable belonging to one, and only one, object. 
+                    This variable is only accessible in the scope of this object and it is defined inside the constructor function,
+                     __init__(self,..) of the class.<br/>
+                    Ex. <br/>
+                   <code>class ExampleClass:<br/>
+                    &nbsp;&nbsp; def __init__(self, instance_attr):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  self.instance_attr = instance_attr<br/>
+                   </code>
+                </p>
+                <p class="card-text">
+                    <strong>Instance Method: </strong>An instance method can access and even modify the value of attributes of an instance. It has one default parameter
+                    <br/>
+                    Ex. <br/>
+                    <code>class ExampleClass:<br/>
+                        &nbsp;&nbsp; def __init__(self, instance_attr):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;  self.instance_attr = instance_attr<br/>
+
+                        &nbsp;&nbsp; # Instance Method<br/>
+                        &nbsp;&nbsp; def instanceMethodTest(self, instance_attr):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;  return self.instance_attr<br/>
+                       </code>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    <strong>Unit Test: </strong>A test case is the individual unit of testing. It checks for a specific response to a particular
+                     set of inputs. unittest provides a base class, TestCase, which may be used to create new test cases.<br/>
+                    Ex. <br/>
+                   <code>def test_calculation_add_get_result_method():<br/>
+                    &nbsp;&nbsp; """Testing the Calculator add """<br/>
+                    &nbsp;&nbsp; tuple_list = (1, 2)<br/>
+                    &nbsp;&nbsp; calculation = Addition.create(tuple_list)<br/>
+                    &nbsp;&nbsp; assert calculation.get_result() == 3 <br/>
+                   </code>
+                </p>
+                <p class="card-text">
+                    <strong>Test fixtures: </strong> A test fixture represents the preparation needed to perform one or more tests, 
+                    and any associated cleanup actions.   <br/>
+                    Ex. <br/>
+                   <code>@pytest.fixture<br/>
+                    def setup_addition_calculation_fixture():<br/>
+                    &nbsp;&nbsp; """define a function that will run each time you pass it to a test"""<br/>
+                    &nbsp;&nbsp; values = (1, 2)<br/>
+                    &nbsp;&nbsp; addition = Addition(values)<br/>
+                    &nbsp;&nbsp; History.add_calculation(addition)<br/>
+                   </code>
+                </p>
+            </div>
+        </div>
+    </div>
+    
 
     <div class="col-6">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"> Overview of SOLID</h5>
                 <p class="card-text">
-                    SOLID stands for:
                 <ul>
                     <li> S - Single-responsiblity Principle. </li>
                     <li> O - Open-closed Principle.</li>
